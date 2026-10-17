@@ -1,16 +1,42 @@
-# React + Vite
+# E-commerce Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple e-commerce front end built with React. Browse products, review your cart, pick delivery options, and track orders.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Product listing with ratings and prices
+- Cart with live item count in the header
+- Checkout page with delivery options and payment summary
+- Orders and package tracking pages
+- Responsive layout
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+The app runs at `http://localhost:5173`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> The app expects a backend serving `/api/products`, `/api/cart-items` and `/api/delivery-options`. Make sure it is running and proxied (or reachable) from the dev server.
+
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
+
+## Project Structure
+
+```
+src/
+├── Pages/        # Home, Checkout, Orders, Tracking
+├── components/   # Shared header components
+├── utils/        # Helpers (e.g. money formatting)
+├── App.jsx       # Routes and cart state
+└── main.jsx      # Entry point
+```
