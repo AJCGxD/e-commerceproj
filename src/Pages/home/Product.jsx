@@ -21,9 +21,11 @@ export function Product({ product, loadCart }) {
   return (
     <div className="product-container">
       <div className="product-image-container">
-        <img className="product-image" 
-        src={product.image} 
-        data-testid="product-image"/>
+        <img
+          className="product-image"
+          src={product.image}
+          data-testid="product-image"
+        />
       </div>
 
       <div className="product-name limit-text-to-2-lines">{product.name}</div>
@@ -63,7 +65,11 @@ export function Product({ product, loadCart }) {
         Added
       </div>
 
-      <button className="add-to-cart-button button-primary" onClick={addToCart}>
+      <button
+        className="add-to-cart-button button-primary"
+        data-testid="add-to-cart-button"
+        onClick={addToCart}
+      >
         Add to Cart
       </button>
     </div>
